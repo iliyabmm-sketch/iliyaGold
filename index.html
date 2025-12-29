@@ -1,15 +1,121 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>اولین سایت من</title>
-<head>
-<body style="background-color: rgb(196, 209, 20);"></body>
-    <h1>سلام! 👋</h1>
-    <p>این اولین سایت منه</p>
-    <body style="background-color: pink; text-align: center; padding-top: 200px;"></body>
-    <d>hello</d>
+<meta charset="UTF-8">
+<title>iliyaGOLD – طلا و نقره</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Vazirmatn',sans-serif;background:linear-gradient(135deg,#0f0f0f,#1c1c1c);color:#eaeaea;}
+a{text-decoration:none;color:inherit;}
+header{background:linear-gradient(90deg,#d4af37,#c0c0c0);color:#111;padding:25px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.4);}
+header h1{margin:0;font-size:28px;letter-spacing:1px;}
+nav a{margin-right:20px;font-weight:600;transition:0.3s;}
+nav a:hover{opacity:0.7;}
+section{display:none;padding:80px 60px;}
+section.active{display:block;}
+.hero{text-align:center;margin-top:40px;}
+.hero h2{font-size:48px;color:#d4af37;}
+.hero p{font-size:18px;max-width:800px;margin:30px auto;line-height:2;color:#ccc;}
+.btn{display:inline-block;margin-top:20px;padding:14px 32px;background:linear-gradient(90deg,#d4af37,#bfa233);color:#111;border-radius:30px;font-weight:bold;transition:0.3s;}
+.btn:hover{opacity:0.8;transform:translateY(-3px);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;margin-top:60px;}
+.card{background:#1f1f1f;border:1px solid #333;border-radius:16px;padding:30px;transition:0.3s;box-shadow:0 8px 20px rgba(0,0,0,0.3);}
+.card:hover{transform:translateY(-10px);border-color:#d4af37;box-shadow:0 12px 28px rgba(212,175,55,0.5);}
+.card h3{color:#d4af37;margin-bottom:15px;}
+.card p{line-height:1.8;color:#ddd;}
+.product-img{width:100%;border-radius:12px;margin-bottom:15px;transition:0.3s;}
+.product-img:hover{transform:scale(1.05);}
+table{width:100%;border-collapse:collapse;margin-top:30px;}
+th,td{padding:12px 15px;border:1px solid #444;text-align:center;}
+th{background:#222;color:#d4af37;}
+td{background:#1f1f1f;}
+.remove-btn{padding:6px 12px;background:#d9534f;color:#fff;border-radius:6px;cursor:pointer;transition:0.2s;}
+.remove-btn:hover{opacity:0.8;}
+input,textarea{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #555;background:#222;color:#eee;}
+input:focus,textarea:focus{outline:2px solid #d4af37;}
+button.contact-btn{background:linear-gradient(90deg,#d4af37,#bfa233);padding:12px 28px;border:none;border-radius:30px;font-weight:bold;cursor:pointer;transition:0.3s;}
+button.contact-btn:hover{opacity:0.85;transform:translateY(-2px);}
+footer{background:#0b0b0b;padding:40px;text-align:center;color:#777;margin-top:80px;font-size:14px;}
+</style>
+</head>
+<body>
+<header>
+<h1>iliyaGOLD – طلا و نقره</h1>
+<nav>
+<a href="#" onclick="showSection('home')">صفحه اصلی</a>
+<a href="#" onclick="showSection('store')">فروشگاه</a>
+<a href="#" onclick="showSection('cart')">سبد خرید</a>
+<a href="#" onclick="showSection('about')">درباره ما</a>
+<a href="#" onclick="showSection('contact')">تماس با ما</a>
+<a href="#" onclick="showSection('rules')">قوانین</a>
+</nav>
+</header>
+
+<section id="home" class="active">
+<div class="hero">
+<h2>مرجع فایل‌های تخصصی طلا و نقره</h2>
+<p>iliyaGOLD یک پلتفرم رسمی و تخصصی برای ارائه فایل‌های دیجیتال در حوزه طلا، نقره و بازارهای مرتبط است. این وب‌سایت با هدف کیفیت، دقت و اعتماد طراحی شده است.</p>
+<a class="btn" href="#" onclick="showSection('store')">ورود به فروشگاه</a>
+</div>
+<div class="cards">
+<div class="card"><h3>فایل‌های آموزشی</h3><p>آموزش‌های تخصصی و کاربردی برای تحلیل و شناخت بازار.</p></div>
+<div class="card"><h3>تحلیل و گزارش</h3><p>گزارش‌های آماده و فایل‌های حرفه‌ای.</p></div>
+<div class="card"><h3>محتوای اختصاصی</h3><p>فایل‌هایی که فقط در iliyaGOLD ارائه می‌شوند.</p></div>
+<div class="card"><h3>راهنما و ابزار</h3><p>فایل‌ها و ابزارهای کمکی برای کاربران حرفه‌ای.</p></div>
+</div>
+</section>
+
+<section id="store">
+<h2 style="color:#d4af37;">فروشگاه فایل‌ها (نمایشی)</h2>
+<div class="cards">
+<!-- تولید 30 محصول -->
+<script>
+for(let i=1;i<=30;i++){
+  document.write('<div class="card">'+
+  '<img src="https://via.placeholder.com/300x180/cccccc/000000?text=فایل+'+i+'" class="product-img" alt="فایل '+i+'">'+
+  '<h3>فایل شماره '+i+'</h3>'+
+  '<p>توضیح کوتاه فایل شماره '+i+'</p>'+
+  '<a class="btn" onclick="addToCart(\'فایل شماره '+i+'\')">افزودن به سبد</a>'+
+  '</div>');
+}
+</script>
+</div>
+</section>
+
+<section id="cart">
+<h2 style="color:#d4af37;">سبد خرید نمایشی</h2>
+<p>در این نسخه نمایشی، فقط برای مشاهده است.</p>
+<table id="cartTable"><thead><tr><th>نام محصول</th><th>عملیات</th></tr></thead><tbody></tbody></table>
+</section>
+
+<section id="about">
+<h2 style="color:#d4af37;">درباره iliyaGOLD</h2>
+<p style="max-width:900px; line-height:2;">iliyaGOLD با تمرکز بر کیفیت، شفافیت و ارائه محتوای حرفه‌ای ایجاد شده است. هدف این مجموعه ایجاد یک مرجع قابل اعتماد در زمینه فایل‌های دیجیتال مرتبط با طلا و نقره است. ما با ارائه فایل‌های آموزشی، تحلیلی و اختصاصی تلاش می‌کنیم کاربران خود را به بهترین سطح اطلاعاتی برسانیم.</p>
+</section>
+
+<section id="contact">
+<h2 style="color:#d4af37;">تماس با ما</h2>
+<p>فرم تماس با ما (نمایشی)</p>
+<input type="text" placeholder="نام شما">
+<input type="email" placeholder="ایمیل شما">
+<textarea placeholder="پیام شما"></textarea>
+<button class="contact-btn">ارسال پیام</button>
+</section>
+
+<section id="rules">
+<h2 style="color:#d4af37;">قوانین و مقررات</h2>
+<p>کلیه حقوق این وب‌سایت محفوظ است. استفاده از محتوا صرفاً طبق قوانین مجاز است.</p>
+</section>
+
+<footer>© 2025 iliyaGOLD – کلیه حقوق محفوظ است</footer>
+
+<script>
+function showSection(id){document.querySelectorAll('section').forEach(sec=>sec.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+const cart=[];
+function addToCart(name){cart.push(name);renderCart();showSection('cart');}
+function removeFromCart(i){cart.splice(i,1);renderCart();}
+function renderCart(){const tbody=document.querySelector('#cartTable tbody');tbody.innerHTML='';cart.forEach((item,i)=>{const tr=document.createElement('tr');tr.innerHTML='<td>'+item+'</td><td><span class="remove-btn" onclick="removeFromCart('+i+')">حذف</span></td>';tbody.appendChild(tr);});}
+</script>
 </body>
 </html>
-
-
